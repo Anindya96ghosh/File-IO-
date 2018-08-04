@@ -17,10 +17,8 @@ public class FileWordCount {
 		System.out.print("Enter input file path and name:");
 		String inFile = scanner.nextLine();
 		System.out.println("You entered: " + inFile);
-		//FileInputStream fs = new FileInputStream(inFile); 
+		
 		File file = new File(inFile);
-		
-		
 		
 		try(Scanner sc=new Scanner(file))
 		{
