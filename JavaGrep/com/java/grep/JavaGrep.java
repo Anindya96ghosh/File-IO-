@@ -13,7 +13,8 @@ public class JavaGrep {
 		System.out.print("Enter input file path and name:");
 		String inFile = scanner.nextLine();
 		System.out.println("You entered: " + inFile);
-		//FileInputStream fs = new FileInputStream(inFile); 
+		
+		
 		File file = new File(inFile);
 		System.out.print("Enter string you want to search:");
 		String string = scanner.nextLine();
@@ -22,6 +23,8 @@ public class JavaGrep {
 		
 		BufferedReader br=new BufferedReader(new FileReader(inFile));
 		String line;
+		
+		//logic to count the line numbers 
 		while((line=br.readLine())!=null)
 		{
 			
