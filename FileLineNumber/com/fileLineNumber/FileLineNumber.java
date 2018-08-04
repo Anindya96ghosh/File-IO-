@@ -16,20 +16,23 @@ public class FileLineNumber {
 		
 		Scanner scanner = new Scanner(System.in);
 		scanner.useDelimiter("\n");
+		
+		//accepting the path from the user
 		System.out.print("Enter input file path and name:");
 		String inFile = scanner.nextLine();
 		System.out.println("You entered: " + inFile);           
-		FileInputStream fs = new FileInputStream(inFile); // FAILED HERE
+		FileInputStream fs = new FileInputStream(inFile); 
 		
-		
-		
-	  File file = new File(inFile);
-	  LineNumberReader lineNumberReader = new LineNumberReader(new FileReader(file));
-	  lineNumberReader.skip(Long.MAX_VALUE);
-	  int lines = lineNumberReader.getLineNumber();
-	  lineNumberReader.close();
+	  	File file = new File(inFile);
+	
+	  	
+		LineNumberReader lineNumberReader = new LineNumberReader(new FileReader(file));
+	  	lineNumberReader.skip(Long.MAX_VALUE);
+	  
+	 	int lines = lineNumberReader.getLineNumber();
+	  	lineNumberReader.close();
 
-	  System.out.println("total number of lines are "+ (lines+1));
+	  	System.out.println("total number of lines are "+ (lines+1));
 
 	}
 }
